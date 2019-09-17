@@ -8,7 +8,7 @@ end test_schema;
 architecture test_architecture of test_schema is
     component decoder_schema
     port(C : in bit_vector(0 to 1);
-         D : in bit_vector(0 to 3);
+         D : in bit_vector(3 downto 0);
          Y : out bit_vector(0 to 15));
     end component;
 

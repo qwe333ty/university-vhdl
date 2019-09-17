@@ -31,11 +31,13 @@ architecture decoder_behaviour of decoder_schema is
           -- calculate result of strobing inputs
           iia2_res: IIA2 port map(a => C(0), b => C(1), y => control_result);
           
+          -- get inverset values for D array
           inv_D_0: N port map(x => D(0), y => inv_D(0));         
           inv_D_1: N port map(x => D(1), y => inv_D(1));         
           inv_D_2: N port map(x => D(2), y => inv_D(2));
           inv_D_3: N port map(x => D(3), y => inv_D(3));
 
+          -- calculate result of NA5 for all possible combinations of D & inv_D
           out_0: NA5 port map(a => inv_D(0), b => inv_D(1), c => inv_D(2), d => inv_D(3), 
                               control => control_result, y => Y(0));
           out_1: NA5 port map(a => D(0), b => inv_D(1), c => inv_D(2), d => inv_D(3), 

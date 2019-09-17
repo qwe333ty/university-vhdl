@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
--- Logical AND with inverse inputs
+-- AND with inverse inputs
 entity IIA2 is
     port(a, b : in bit;
          y : out bit);
