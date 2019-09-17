@@ -9,5 +9,5 @@ end N;
 
 architecture n_behaviour of N is
     begin
-        y <= (not x);
+        y <= (not x) after 1 ns;
 end n_behaviour;
