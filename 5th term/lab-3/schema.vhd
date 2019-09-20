@@ -68,15 +68,19 @@ architecture schema_behaviour of schema is
                                                    c1 => temp_c_supplier,
                                                    s1 => intermediate_bit_supplier(horizontal_index));
                     end generate middle_case_1;
+
+                    end_case_1: if horizontal_index = N - 1 generate
                         zero_and_1: and_operator port map(a => r(vertical_index), 
-                                                        b => s(horizontal_index),
-                                                        y => temp_bit_supplier);
+                                                          b => s(horizontal_index),
+                                                          y => temp_bit_supplier);
                         add_1: half_adder port map(b1 => temp_bit_supplier, -- maybe it's corner case. ask a question!!!
                                                    b2 => intermediate_bit_supplier(horizontal_index + 1),
                                                    c1 => temp_c_supplier,
                                                    s1 => t(vertical_index));
-                    end_case_1: if horizontal_index = N - 1 generate
-
+                    end generate end_case_1;
                 end generate inner_horizontal_direction_1;
             end generate middle_vertical_line;
+
+            --
+        end generate vertical_direction;
 end schema_behaviour; 
