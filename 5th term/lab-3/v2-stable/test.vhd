@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity test_entity is
 end test_entity;
 
@@ -32,7 +32,8 @@ architecture test_architecture of test_entity is
              "0110" after 900 ns,
              "0111" after 1100 ns,
              "1000" after 1300 ns,
-	         "1011" after 1500 ns; 
+             "1011" after 1500 ns;
+              
         s <= "0000",
              "0001" after 100 ns,
              "0010" after 200 ns,

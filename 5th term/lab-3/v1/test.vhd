@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity test_entity is
 end test_entity;
 

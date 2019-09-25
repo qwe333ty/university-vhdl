@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity schema is
     generic (N : natural := 4);
     port(r, s : in bit_vector(0 to N - 1);

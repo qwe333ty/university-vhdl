@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity full_adder is
     --   P   A   B
     port(b1, b2, b3 : in bit;

@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity multiplication_stage is
     generic(N : natural := 4);
     port(r : in bit;

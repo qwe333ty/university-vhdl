@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity schema is
     generic(N : natural := 4);
     port(r, s : in bit_vector(N - 1 downto 0);
@@ -43,6 +43,7 @@ architecture schema_behaviour of schema is
                                  prev_stage_sums => prev_stage_sums_array(vertical_index),
                                  current_stage_sums => current_stage_sums_array(vertical_index),
                                  out_t => t(vertical_index));
+
                 t((2 * N) - 1 downto N) <= current_stage_sums_array(vertical_index)(N - 1 downto 0);
             end generate last_element;
         end generate vertical_direction;

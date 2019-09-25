@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity half_adder is
     port(b1, b2 : in bit;
          c1, s1 : out bit);

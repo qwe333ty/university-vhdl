@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Aliksandr Rahavoi
+-- Aliaksandr Rahavoi
 entity multiplication_stage is
     generic(N : natural := 4);
     port(r : in bit;
@@ -36,6 +36,7 @@ architecture multiplication_stage_behaviour of multiplication_stage is
                 calculate_and: and_operator port map(a => r,
                                                      b => s(horizontal_index),
                                                      y => and_results(horizontal_index));
+                                                     
                 sum_values: half_adder port map(b1 => and_results(horizontal_index),
                                                 b2 => prev_stage_sums(horizontal_index),
                                                 c1 => carry_results(horizontal_index),
@@ -46,6 +47,7 @@ architecture multiplication_stage_behaviour of multiplication_stage is
                 calculate_and: and_operator port map(a => r,
                                                      b => s(horizontal_index),
                                                      y => and_results(horizontal_index));
+
                 sum_values: full_adder port map(b1 => carry_results(horizontal_index - 1),
                                                 b2 => and_results(horizontal_index),
                                                 b3 => prev_stage_sums(horizontal_index),
@@ -57,6 +59,7 @@ architecture multiplication_stage_behaviour of multiplication_stage is
                 calculate_and: and_operator port map(a => r,
                                                      b => s(horizontal_index),
                                                      y => and_results(horizontal_index));
+                                                     
                 sum_values: full_adder port map(b1 => carry_results(horizontal_index - 1),
                                                 b2 => and_results(horizontal_index),
                                                 b3 => prev_stage_sums(horizontal_index),
