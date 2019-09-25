@@ -67,5 +67,4 @@ architecture multiplication_stage_behaviour of multiplication_stage is
                                                 s1 => current_stage_sums(horizontal_index - 1));
             end generate last_index;
         end generate horizontal_direction;
-
 end multiplication_stage_behaviour; 
